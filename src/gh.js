@@ -1,5 +1,6 @@
 import { Octokit } from '@octokit/rest';
 import { groupby, ensureEndsNewline, iso8601DayCurrTZ } from './utils';
+import { Base64 } from 'js-base64';
 
 export class Github {
   constructor(auth) {
@@ -13,7 +14,7 @@ export class Github {
     const repoQuery = {owner: this.owner, repo: this.repo};
     try {
       const {data} = await this.api.repos.getContents({path, ...repoQuery});
-      const content = atob(data.content);
+      const content = Base64.decode(data.content);
       return [content, data.sha];
     } catch(e) {
       if (e.status == 404 && e.name == 'HttpError' && e.message === "Not Found") {
@@ -33,7 +34,7 @@ export class Github {
     await this.api.repos.createOrUpdateFile({
       path: path,
       message: 'Update',
-      content: btoa(content),
+      content: Base64.encode(content),
       name: this.auth.user.name,
       email: this.auth.user.email,
       sha: sha,
