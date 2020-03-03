@@ -4,6 +4,8 @@ dev:
 build:
 	rm -rf dist
 	node_modules/.bin/parcel build src/index.html --public-url=https://carlos.correa.me/take-note/
+	rm -rf dist/sw.js*
+	node_modules/.bin/workbox generateSW src/workbox-config.js
 
 CURR_BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
 
