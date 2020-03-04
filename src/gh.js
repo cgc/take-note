@@ -50,7 +50,7 @@ export class Github {
   }
 
   filename(day) {
-    return `hitest-${day}.md`;
+    return `${day}.md`;
   }
 
   async loadNotes(day) {

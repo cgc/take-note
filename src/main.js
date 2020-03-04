@@ -40,6 +40,8 @@ class Draft {
     document.addEventListener('visibilitychange', (e) => {
       if (document.hidden) {
         this.save();
+      } else {
+        this.el.focus();
       }
     }, false);
   }
@@ -138,6 +140,7 @@ class Application {
       this.local.save(text);
       this.sync()
     }
+    this.textarea.focus();
   }
 
   loadRemoteLocal() {
@@ -211,6 +214,7 @@ function main() {
   app.draft.addEventListeners();
   app.draft.load();
   app.sync();
+  app.textarea.focus();
 
   githubLogin().then(function(auth) {
     app.api = new Github(auth);
