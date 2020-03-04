@@ -4,13 +4,26 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Take Note</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="main.css">
   <link rel="manifest" href="manifest.webmanifest">
+
+  <!--
+  From https://realfavicongenerator.net/favicon_result?file_id=p1e2hkob1uhlps6mjis1bco1kaf6#.Xl8PV5NKgWp
+  Using https://emojipedia.org/openmoji/12.0/memo/
+  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <div id="container">
-    <form id="note">
+    <form class="Composer">
       <textarea rows="6" name="text"></textarea>
       <input type="submit" value="+" />
     </form>

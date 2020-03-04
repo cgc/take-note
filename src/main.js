@@ -99,7 +99,7 @@ class Application {
     this.notesEl.querySelector('.Notes-error').addEventListener('click', (e) => {
       this.sync();
     });
-    const noteForm = document.querySelector('form#note');
+    const noteForm = document.querySelector('form.Composer');
     this.textarea = noteForm.querySelector('[name=text]');
 
     this.draft = new Draft(this.textarea);
@@ -193,7 +193,7 @@ class Application {
 const noteRender = note => `
 <div class="Note">
   <div class="Note-inner">
-    <span class="Note-dt">${note.dtstr}</span>
+    <div class="Note-dt">${note.dtstr}</div>
     <span class="Note-text">${note.text}</span>
   </div>
 </div>

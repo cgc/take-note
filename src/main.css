@@ -1,9 +1,18 @@
+@import "normalize.css";
+
 body {
   margin: 0;
+  font-family: Georgia;
+  /* https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
+  font-size: 16px;
+}
+
+input[type="text"] {
+  font-size: inherit;
 }
 
 #container {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 
   min-height: 100vh;
@@ -34,6 +43,18 @@ body {
   margin: 0;
 }
 
+.Composer {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.Composer textarea {
+  width: 100%;
+  margin-right: 0.5rem;
+}
+.Composer input[type=submit] {
+  width: 3rem;
+}
 
 .Login-info {
   min-height: 4rem;

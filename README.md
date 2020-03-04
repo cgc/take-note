@@ -11,7 +11,12 @@ To run the dev server:
 make dev
 ```
 
-To build the app (commit the dist folder!)
+To build the app:
 ```
 make build
+```
+
+Or release it:
+```
+make release
 ```
