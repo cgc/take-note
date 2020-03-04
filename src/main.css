@@ -17,7 +17,7 @@ input[type="text"] {
 
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0.5rem;
 
   display: flex;
   flex-direction: column-reverse;
@@ -32,12 +32,11 @@ input[type="text"] {
 .Note-inner {
   border: 1px solid #777;
   padding: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
   display: inline-block;
 }
 .Note-dt {
   font-size: 0.5rem;
-  color: #777;
 }
 .Note-text > * {
   margin: 0;
@@ -51,9 +50,15 @@ input[type="text"] {
 .Composer textarea {
   width: 100%;
   margin-right: 0.5rem;
+  border-radius: 5px;
 }
 .Composer input[type=submit] {
   width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .Login-info {
